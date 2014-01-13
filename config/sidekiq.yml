@@ -1,0 +1,7 @@
+:queues:
+- [android_alert_worker_queue, 1]
+- [ios_alert_worker_queue, 1]
+:verbose: false
+#:pidfile: /path/to/my/pidfile
+#:logfile: /path/to/my/logfile
+:concurrency:  10

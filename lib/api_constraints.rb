@@ -9,6 +9,6 @@ class ApiConstraints
   end
     
   def matches?(req)
-    @default || req.headers['Accept'].include?("application/toddler.v#{@version}")
+    @default || req.headers['Accept'].include?("application/example-mobile-pns.v#{@version}")
   end
 end
