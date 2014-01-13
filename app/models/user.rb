@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   has_one :device, dependent: :destroy
-  has_many :report_submissions
 
   validates :email, :sex, presence: true
   
