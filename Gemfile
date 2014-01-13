@@ -37,10 +37,23 @@ gem 'grocer'
 # Android notifications
 gem 'gcm'
 
+gem 'friendly_id', '~> 5.0.0'
+gem 'active_model_serializers'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+
+  # mock and what not
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'mocha'
+  gem 'pry'
 end
 
 # Use ActiveModel has_secure_password

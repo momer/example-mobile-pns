@@ -1,3 +1,5 @@
+require 'core_ext/string'
+
 module Api
   module V1
     class UsersController < ApplicationController
@@ -25,7 +27,7 @@ module Api
         @user = User.all.load
 
         respond_to do |format|
-          format.json { render json: @user.to_json }
+          format.json { render json: @user }
         end
       end
 
@@ -49,7 +51,7 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:email, :lat, :lng, :sex, device_attributes: [:token, :platform, :enabled])
+        params.require(:user).permit(:email, :lat, :lng, :sex, device_attributes: [:token, :platform])
       end
     end
   end
